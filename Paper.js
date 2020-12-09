@@ -1,22 +1,24 @@
-class Box {
-    constructor(x, y, width, height) {
+class Paper {
+    constructor(x, y, radius) {
 
       var option={
+        isStatic:false,
         restitution:0.3,
-        density:1.2,
-        friction:0.5
+        friction:0.5,
+        density:1.2
+        
       };
     
-      this.body = Bodies.rectangle(x, y, width, height,option);
-      this.width = width;
-      this.height = height;
+      this.body = Bodies.circle(x, y,radius,option);
+      this.width = radius;
+      this.height = radius;
       
       World.add(world, this.body);
     }
     display(){
       
       ellipseMode(CENTER);
-      fill("red");
+      fill("green");
       ellipse(this.body.position.x, this.body.position.y, this.width, this.height);
      
     }
