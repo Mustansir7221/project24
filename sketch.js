@@ -47,7 +47,7 @@ function draw() {
 }
  function keyPressed(){
 	 if (keyCode===UP_ARROW){
-		Body.applyForce(paper.body,paper.body.position,{x:130 ,y:145});
+		Body.applyForce(paper.body,paper.body.position,{x:55 ,y:55});
 	 }
 	 
  }
